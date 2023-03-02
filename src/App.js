@@ -5,6 +5,7 @@ import words from "./words";
 
 function App() {
     const [usedWords, setUsedWords] = useState([])
+    const [showVictory, setShowVictory] = useState(true)
     const bingoWords = useMemo(() => {
         const wordsClone = words.slice(0) // to deal with https://github.com/facebook/react/issues/24935
         const wordsList = []
@@ -29,7 +30,7 @@ function App() {
                     )
                 })}
             </div>
-            {usedWords.length === 9 && <VictoryModal />}
+            {usedWords.length === 9 && showVictory && <VictoryModal hideModal={() => setShowVictory(false)} />}
         </div>
     );
 }

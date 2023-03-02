@@ -40,12 +40,18 @@
   },
   "husky": {
     "hooks": {
-    "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "homepage": "https://ijontichy42.github.io/bingo/",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "predeploy": "yarn run build",
+  "deploy": "gh-pages -d build"
 }

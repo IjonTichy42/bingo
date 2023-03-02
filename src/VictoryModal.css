@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .victory-modal {
@@ -17,4 +17,35 @@
     border: 1px solid rgba(0, 0, 0, 0.8);
     background: #fff;
     padding: 0;
+}
+
+.victory-modal__secret-link {
+    text-decoration: none;
+}
+
+.victory-modal__close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.victory-modal__close:hover {
+    opacity: .9;
+}
+.victory-modal__close:before, .victory-modal__close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.victory-modal__close:before {
+    transform: rotate(45deg);
+}
+.victory-modal__close:after {
+    transform: rotate(-45deg);
 }
